@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/uptowngirl757/testimonials-grid-section](https://github.com/uptowngirl757/testimonials-grid-section)
+- Live Site URL: [https://uptowngirl757.github.io/testimonials-grid-section/](https://uptowngirl757.github.io/testimonials-grid-section/)
 
 ## My process
 
