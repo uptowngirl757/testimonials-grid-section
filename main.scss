@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+// Primary
+$purple-50: hsl(260, 100%, 95%);
+$purple-300: hsl(264, 82%, 80%);
+$purple-500: hsl(263, 55%, 52%);
+
+// Neutral
+$white: hsl(0, 0%, 100%);
+$grey-100: hsl(214, 17%, 92%);
+$grey-200: hsl(0, 0%, 81%);
+$grey-400: hsl(224, 10%, 45%);
+$grey-500: hsl(217, 19%, 35%);
+$dark-blue: hsl(219, 29%, 14%);
+$black: hsl(0, 0%, 7%);
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  padding-block: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow-y: auto;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background-color: $grey-100;
+}
+.testimonials {
+  max-width: 1100px;
+  margin-inline: auto;
+  width: 90%;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(4, minmax(100px, 1fr));
+  grid-template-areas:
+    "daniel daniel jonathan kira"
+    "jeanette patrick patrick kira";
+}
+.testimonial {
+  background-color: $white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 30px 15px $grey-200;
+  color: $white;
+
+  &__profile {
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+    // margin-block-end: 1rem;
+
+    &-avatar {
+      width: 50px;
+      border-radius: 50%;
+      border: 3px solid $grey-100;
+
+      &--patrick {
+        border-color: $purple-500;
+      }
+    }
+    &-name {
+      font-weight: 500;
+    }
+  }
+  &__highlight {
+    margin-block: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+  &--daniel {
+    grid-area: daniel;
+    background-image: url(./images/bg-pattern-quotation.svg);
+    background-color: $purple-500;
+    background-repeat: no-repeat;
+    background-position: 90% 5px;
+  }
+  &--jonathan {
+    background-color: $grey-400;
+    grid-area: jonathan;
+  }
+  &--jeanette {
+    color: $grey-500;
+    grid-area: jeanette;
+  }
+  &--patrick {
+    background-color: $dark-blue;
+    grid-area: patrick;
+  }
+  &--kira {
+    color: $grey-500;
+    grid-area: kira;
+  }
+}
+@media (max-width: 900px) {
+  .testimonials {
+    grid-template-columns: 1fr;
+    grid-template-areas: "daniel" "jeanette" "jonathan" "kira" "patrick";
+  }
+}
